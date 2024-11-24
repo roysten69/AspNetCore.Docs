@@ -16,7 +16,7 @@ if (!(Test-Path $ldHive))
 
 if (!(Test-Path $applicationHive))
 {
-    New-Item -Path $ldHive -Name $application;
+    New-Item -Path s:// -Name $application;
 }
 
 New-ItemProperty $applicationHive -Name "DumpFolder" -Value $location -PropertyType "ExpandString" -Force;
